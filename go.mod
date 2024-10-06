@@ -1,3 +1,3 @@
-module github.com/xtdlib/filepathx
+module github.com/xtdlib/filepath
 
 go 1.22.3

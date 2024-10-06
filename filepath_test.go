@@ -1,4 +1,4 @@
-package filepathx
+package filepath
 
 import "testing"
 

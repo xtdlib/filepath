@@ -4,7 +4,7 @@ import (
 	"io/fs"
 	"log"
 
-	"github.com/xtdlib/filepathx"
+	"github.com/xtdlib/filepath"
 )
 
 func main() {
