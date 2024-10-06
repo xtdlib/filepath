@@ -12,15 +12,6 @@ func Stem(filename string) string {
 	return strings.TrimSuffix(filename, Ext(filename))
 }
 
-// Stem1 is same with Stem
-var Stem1 = Stem
-
-// Stem2 removes 2 comma extension qwer.tar.gz -> qwer
-func Stem2(filename string) string {
-	return StemN(filename, 2)
-}
-
-// StemN removes N comma extension
 func StemN(filename string, n int) string {
 	stem := filename
 	i := 0
@@ -36,23 +27,8 @@ func StemN(filename string, n int) string {
 	}
 }
 
-// Stem0 removes max comma extension qwer.tar.gz -> qwer
-func Stem0(filename string) string {
-	return StemN(filename, 99)
-}
-
-var Ext1 = Ext
-
-func Ext2(path string) string {
-	return strings.TrimPrefix(path, Stem2(path))
-}
-
 func ExtN(path string, n int) string {
 	return strings.TrimPrefix(path, StemN(path, n))
-}
-
-func Ext0(path string) string {
-	return strings.TrimPrefix(path, Stem0(path))
 }
 
 func IsSymlink(mode fs.FileMode) bool {
