@@ -7,9 +7,9 @@ import (
 	"strings"
 )
 
-// Stem returns name without extension qwer.tar.gz -> qwer.tar
+// Stem returns name without extension vvv/qwer.tar.gz -> qwer.tar
 func Stem(filename string) string {
-	return strings.TrimSuffix(filename, Ext(filename))
+	return strings.TrimSuffix(filepath.Base(filename), Ext(filename))
 }
 
 func StemN(filename string, n int) string {

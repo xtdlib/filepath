@@ -5,6 +5,7 @@ import "testing"
 func Test1(t *testing.T) {
 	// equal(t, Stem0("asd.x.tar.gz"), "asd")
 	equal(t, Stem("asd.x.tar.gz"), "asd.x.tar")
+	equal(t, Stem("ff/asd.x.tar.gz"), "asd.x.tar")
 	equal(t, StemN("asd.x.tar.gz", 2), "asd.x")
 	equal(t, ExtN("asd.x.tar.gz", 2), ".tar.gz")
 	equal(t, ExtN("asd.x.tar.gz", 1), ".gz")
